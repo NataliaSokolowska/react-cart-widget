@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "name": "Patelnia",
+    "price": "89.99",
+    "max": 10,
+    "min": 1
+  },
+  {
+    "id": "2",
+    "name": "Garnek mały",
+    "price": "29.99",
+    "max": 10,
+    "min": 1
+  },
+  {
+    "id": " 3",
+    "name": "Garnek duży",
+    "price": "49.99",
+    "max": 10,
+    "min": 1
+  },
+  {
+    "id": "4",
+    "name": "Zestaw garnków 10 w 1",
+    "price": "259.89",
+    "max": 2,
+    "min": 1
+  },
+  {
+    "id": "5",
+    "name": "Ręcznik kuchenny",
+    "price": "5.00",
+    "max": 20,
+    "min": 1
+  },
+  {
+    "id": "6",
+    "name": "React (ebook)",
+    "price": "34.99",
+    "max": 1,
+    "min": 1,
+    "isBlocked": true
+  },
+  {
+    "id": "7",
+    "name": "Kuchnia tradycyjna (ebook)",
+    "price": "24.99",
+    "max": 1,
+    "min": 1,
+    "isBlocked": true
+  }
+]
