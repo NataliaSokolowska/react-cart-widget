@@ -3,6 +3,7 @@ import CartSection from "./components/Organism/CartSection/CartSection";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/GlobalStyle";
 import { theme } from "./theme/mainTheme";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

@@ -17,12 +17,6 @@ const GlobalStyle = createGlobalStyle`
         color: #333;
         font-family: 'Montserrat', sans-serif;
     }
-
-    .container {
-        width: 1000px;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
 `;
 
 export default GlobalStyle;
