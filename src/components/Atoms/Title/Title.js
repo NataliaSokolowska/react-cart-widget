@@ -1,8 +1,8 @@
 import React from "react";
-import * as S from "./TitleStyle";
+import { TitleHeader } from "./TitleStyle";
 
-const Heading = (props) => {
-  return <S.Title>{props.title}</S.Title>;
+const Title = ({ title, extra }) => {
+  return <TitleHeader extra={extra}>{title}</TitleHeader>;
 };
 
-export default Heading;
+export default Title;
