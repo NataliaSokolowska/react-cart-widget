@@ -29,7 +29,7 @@ const CartSection = () => {
     <>
       <CartHeader />
       <CartTable />
-      <Item />
+      <Item items={items} />
       <Summary />
       <Button buttonTitle="Zamawiam" />
     </>
