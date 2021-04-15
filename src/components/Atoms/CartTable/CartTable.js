@@ -1,19 +1,24 @@
 import React from "react";
 import Paragraph from "../Paragraph/Paragraph";
+import { CartTableWrapper } from "./CartTableStyle";
 
 const Item = () => {
   return (
-    <div className="row">
-      <div className="col-lg-4">
+    <CartTableWrapper>
+      <div className="col-lg-5">
         <Paragraph title="Produkt" extra="light" />
       </div>
-      <div className="col-lg-4">
-        <Paragraph title="Ilość" extra="light" />
+      <div className="col-lg-7">
+        <div className="row">
+          <div className="col-lg-5">
+            <Paragraph title="Ilość" extra="light" />
+          </div>
+          <div className="col-lg-7">
+            <Paragraph title="Cena" extra="light" />
+          </div>
+        </div>
       </div>
-      <div className="col-lg-4">
-        <Paragraph title="Cena" extra="light" />
-      </div>
-    </div>
+    </CartTableWrapper>
   );
 };
 
