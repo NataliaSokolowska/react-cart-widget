@@ -13,7 +13,12 @@ const CartSection = () => {
   }, []);
 
   const fetchData = () => {
-    fetch("./data/cart.json")
+    fetch("./data/cart.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
       .then((response) => response.json())
       .then((response) => {
         const items = response.map((item) => ({
