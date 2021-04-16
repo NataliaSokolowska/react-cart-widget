@@ -4,3 +4,11 @@ export function formatPrice(price) {
     currency: "PLN",
   });
 }
+
+export function pluralizeForm(quantity) {
+  return quantity > 4
+    ? `${quantity} sztuk`
+    : quantity === 1
+    ? `${quantity} sztukę`
+    : `${quantity} sztuki`;
+}
