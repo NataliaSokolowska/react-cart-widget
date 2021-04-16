@@ -1,9 +1,16 @@
-import React from "react";
+import { ItemSection, ItemTitle, ItemInfo, ItemImage } from "./ItemStyle";
+import Paragraph from "../../Atoms/Paragraph/Paragraph";
 
 const Item = ({ items }) => {
   return items.map((item) => (
-    <div className="row" key={item.id}>
-      <div className="col-lg-5">{item.name}</div>
+    <ItemSection key={item.id}>
+      <ItemInfo>
+        <ItemImage src={item.image} alt={item.name} />
+        <ItemTitle>
+          <Paragraph extra="bold" title={item.name} />
+          <Paragraph extra="light" title={`Kategoria: ${item.category}`} />
+        </ItemTitle>
+      </ItemInfo>
       <div className="col-lg-7">
         <div className="row">
           <div className="col-lg-5">
@@ -13,7 +20,7 @@ const Item = ({ items }) => {
           <div className="col-lg-7">{item.price}</div>
         </div>
       </div>
-    </div>
+    </ItemSection>
   ));
 };
 
