@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #f1f3f7;
+        background-color: #fff;
         font-size: 1.6rem;
         color: #333;
         font-family: 'Montserrat', sans-serif;
