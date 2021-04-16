@@ -14,4 +14,11 @@ export const ParagraphText = styled.p`
       color: ${({ theme }) => theme.silver};
       font-size: ${({ theme }) => theme.fontSize.xs};
     `}
+
+  ${(props) =>
+    props &&
+    props.extra === "bold" &&
+    css`
+      font-weight: bold;
+    `}
 `;
