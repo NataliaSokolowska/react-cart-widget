@@ -5,8 +5,9 @@
     "category": "AGD",
     "price": "89.99",
     "max": 10,
-    "min": 1,
-    "image": "../assets/img/first.jpeg"
+    "min": 3,
+    "isBlocked": true,
+    "image": "/assets/img/first.jpeg"
   },
   {
     "id": "2",
@@ -15,7 +16,7 @@
     "price": "29.99",
     "max": 10,
     "min": 1,
-    "image": "../assets/img/second.jpeg"
+    "image": "/assets/img/second.jpeg"
   },
   {
     "id": " 3",
@@ -24,7 +25,7 @@
     "price": "49.99",
     "max": 10,
     "min": 1,
-    "image": "../assets/img/third.jpeg"
+    "image": "/assets/img/third.jpeg"
   },
   {
     "id": "4",
@@ -33,7 +34,7 @@
     "category": "AGD",
     "max": 2,
     "min": 1,
-    "image": "../assets/img/fourth.jpeg"
+    "image": "/assets/img/fourth.jpeg"
   },
   {
     "id": "5",
@@ -42,7 +43,7 @@
     "category": "Kuchnia",
     "max": 20,
     "min": 1,
-    "image": "../assets/img/fifth.jpeg"
+    "image": "/assets/img/fifth.jpeg"
   },
   {
     "id": "6",
@@ -52,7 +53,7 @@
     "max": 1,
     "min": 1,
     "isBlocked": true,
-    "image": "../assets/img/sixth.jpeg"
+    "image": "/assets/img/sixth.jpeg"
   },
   {
     "id": "7",
@@ -62,6 +63,6 @@
     "max": 1,
     "min": 1,
     "isBlocked": true,
-    "image": "../assets/img/seventh.jpeg"
+    "image": "/assets/img/seventh.jpeg"
   }
 ]
