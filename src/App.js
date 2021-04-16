@@ -1,4 +1,3 @@
-import "./App.css";
 import CartSection from "./components/Organism/CartSection/CartSection";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/GlobalStyle";
