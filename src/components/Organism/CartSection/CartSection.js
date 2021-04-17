@@ -23,6 +23,7 @@ const CartSection = () => {
       .then((response) => {
         const items = response.map((item) => ({
           ...item,
+          price: item.price * item.min,
         }));
 
         setItems(items);
@@ -34,7 +35,7 @@ const CartSection = () => {
     <>
       <CartHeader />
       <CartTable />
-      <Item items={items} />
+      <Item items={items} setItems={setItems} />
       <Summary />
       <Button buttonTitle="Zamawiam" />
     </>

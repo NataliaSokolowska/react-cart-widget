@@ -6,7 +6,6 @@
     "price": "89.99",
     "max": 10,
     "min": 3,
-    "isBlocked": true,
     "image": "/assets/img/first.jpeg"
   },
   {
@@ -60,9 +59,9 @@
     "name": "Kuchnia tradycyjna (ebook)",
     "price": "24.99",
     "category": "Ksiązki",
-    "max": 1,
+    "max": 2,
     "min": 1,
-    "isBlocked": true,
+    "isBlocked": false,
     "image": "/assets/img/seventh.jpeg"
   }
 ]

@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Paragraph from "../../Atoms/Paragraph/Paragraph";
 import QuantityInput from "../../Atoms/QuantityInput/QuantityInput";
 import { formatPrice } from "../../../helpers";
@@ -11,16 +12,19 @@ import {
   ItemQuantity,
 } from "./ItemStyle";
 
-const Item = ({ items }) => {
-  const handlePriceSummary = (id, summary, price) => {
-    if (items.length > 0) {
-      const index = items?.findIndex((obj) => obj.id === id);
-      price = summary.toFixed(2);
-      console.log(price);
-    }
+const Item = ({ items, setItems }) => {
+  const myPrice = useRef();
+
+  const handlePriceSummary = (id, summary) => {
+    //summary zwraca mi poprawną cenę, tę którą chcę mieć zamiast item.price po zmianie inputu
+    items.map((item) => {
+      if (item.id === id) {
+        // myPrice.current.innerHTML = summary; //przypisuje summary do ostatniego zmapowanego elem.
+      }
+    });
   };
 
-  return items.map((item) => (
+  return items.map((item, index) => (
     <ItemRow key={item.id} extra="itemSection">
       <ItemInfo>
         <ItemImage src={item.image} alt={item.name} />
@@ -34,12 +38,10 @@ const Item = ({ items }) => {
           <ItemQuantity>
             <QuantityInput
               item={item}
-              itemData={(id, summary, price) =>
-                handlePriceSummary(id, summary, price)
-              }
+              itemData={(id, summary) => handlePriceSummary(id, summary)}
             />
           </ItemQuantity>
-          <ItemPrice>{formatPrice(item.price)}</ItemPrice>
+          <ItemPrice ref={myPrice}>{formatPrice(item.price)}</ItemPrice>
         </ItemRow>
       </ItemActions>
     </ItemRow>

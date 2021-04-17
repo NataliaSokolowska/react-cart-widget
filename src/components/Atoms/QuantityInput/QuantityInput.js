@@ -5,9 +5,13 @@ import { QBtn, QInput } from "./QuantityInputStyle";
 const QuantityInput = ({ itemData, item }) => {
   const { id, name, price, min, max, isBlocked } = item;
   const [count, setCount] = useState(1);
+  const [newPrice, setNewPrice] = useState(price);
+
+  const summary = count * newPrice;
+  //summary to jest to co chcę mieć w state (chyba?)
 
   useEffect(() => {
-    itemData(id, count * price, price);
+    itemData(id, summary);
   }, [count]);
 
   useEffect(() => {
