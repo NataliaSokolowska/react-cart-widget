@@ -13,18 +13,21 @@ import {
 } from "./ItemStyle";
 
 const Item = ({ items, setItems }) => {
-  const myPrice = useRef();
+  const itemsRef = useRef([]);
+  // console.log(itemsRef);
 
-  const handlePriceSummary = (id, summary) => {
+  const handlePriceSummary = (id, summary, count) => {
     //summary zwraca mi poprawną cenę, tę którą chcę mieć zamiast item.price po zmianie inputu
-    items.map((item) => {
-      if (item.id === id) {
-        // myPrice.current.innerHTML = summary; //przypisuje summary do ostatniego zmapowanego elem.
+    const newFormatPrice = formatPrice(summary);
+    itemsRef.current.map((reference, i) => {
+      const itemsIndex = items?.findIndex((obj) => obj.id === id);
+      if (itemsIndex === i) {
+        reference.innerHTML = newFormatPrice;
       }
     });
   };
 
-  return items.map((item, index) => (
+  return items.map((item, i) => (
     <ItemRow key={item.id} extra="itemSection">
       <ItemInfo>
         <ItemImage src={item.image} alt={item.name} />
@@ -41,7 +44,9 @@ const Item = ({ items, setItems }) => {
               itemData={(id, summary) => handlePriceSummary(id, summary)}
             />
           </ItemQuantity>
-          <ItemPrice ref={myPrice}>{formatPrice(item.price)}</ItemPrice>
+          <ItemPrice ref={(item) => (itemsRef.current[i] = item)}>
+            {formatPrice(item.price)}
+          </ItemPrice>
         </ItemRow>
       </ItemActions>
     </ItemRow>
