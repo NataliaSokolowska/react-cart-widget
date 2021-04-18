@@ -5,11 +5,8 @@ import { QBtn, QInput } from "./QuantityInputStyle";
 const QuantityInput = ({ itemData, item }) => {
   const { id, name, price, min, max, isBlocked } = item;
   const [count, setCount] = useState(1);
-  //const [newPrice, setNewPrice] = useState(price);
-
-  const summary = count * price;
-  //summary to jest to co chcę mieć w state (chyba?)
-  //TU JEST PROBLEM - gdy min jest większe od 1, state się jakoś aktualizuje i podaje summary - count * przemnozona juz cena wyswietlana na froncie
+  const [newPrice, setNewPrice] = useState(price);
+  const summary = count * newPrice;
 
   useEffect(() => {
     itemData(id, summary);
@@ -17,6 +14,7 @@ const QuantityInput = ({ itemData, item }) => {
 
   useEffect(() => {
     setCount(min);
+    setNewPrice(price);
   }, []);
 
   const addCountHandler = () => {

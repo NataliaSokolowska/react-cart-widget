@@ -14,13 +14,12 @@ import {
 
 const Item = ({ items, setItems }) => {
   const itemsRef = useRef([]);
-  // console.log(itemsRef);
 
   const handlePriceSummary = (id, summary, count) => {
-    //summary zwraca mi poprawną cenę, tę którą chcę mieć zamiast item.price po zmianie inputu
     const newFormatPrice = formatPrice(summary);
+    const itemsIndex = items?.findIndex((obj) => obj.id === id);
+
     itemsRef.current.map((reference, i) => {
-      const itemsIndex = items?.findIndex((obj) => obj.id === id);
       if (itemsIndex === i) {
         reference.innerHTML = newFormatPrice;
       }

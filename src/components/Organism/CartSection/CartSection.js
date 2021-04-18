@@ -23,7 +23,6 @@ const CartSection = () => {
       .then((response) => {
         const items = response.map((item) => ({
           ...item,
-          price: item.price * item.min,
         }));
 
         setItems(items);
